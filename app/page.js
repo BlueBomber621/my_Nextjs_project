@@ -1,103 +1,249 @@
+import Banner from "@/components/Banner";
 import Image from "next/image";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <>
+      <Banner source={"/Snowstorm.png"} />
+      <div className="p-10 text-center flex-grow">
+        {/* Title */}
+        <h1
+          className="mb-5 text-primary-600 text-2xl font-bold border-b-2 border-dotted border-primary-75
+        dark:border-primary-800 md:text-4xl"
+        >
+          About Me
+        </h1>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+        {/* Area A: Introduction */}
+        <h2
+          className="text-primary-400 text-left font-bold px-10 text-2xl md:text-3xl"
+          id="introduction"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          Introduction
+        </h2>
+
+        {/* Section 1A: About Me */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+        p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="experience"
         >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
+          <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+            My Experience
+          </h2>
+          <p className="text-left text-primary-900 dark:text-primary-75">
+            I have had an interest in coding since I was young, and the journey
+            of learning how to code has been something I've genuinely enjoyed.
+            I've found coding is something I quickly pick up; when I learn a{" "}
+            <a
+              href="#coding-languages"
+              className="text-primary-700 hover:underline dark:text-primary-500"
+            >
+              coding language
+            </a>
+            , I feel like I can understand well how to put it all together.
+            While it may not be a popular opinion, I actually enjoy debugging.
+            I've enjoyed debugging because I find it satisfying to apply what
+            I've learned to track down where the problem lies, and to solve the
+            problems I come across.
+          </p>
+        </section>
+
+        {/* Thematic Break */}
+        <hr className="my-5 border-2 border-dashed border-primary-300" />
+
+        {/* Area B: Coding Languages */}
+        <h2
+          className="text-primary-400 text-left font-bold px-10 text-2xl md:text-3xl"
+          id="coding-languages"
         >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          Coding Languages
+        </h2>
+
+        {/* Section 1B: HTML and CSS */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+        p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="html-css"
+        >
+          <div className="flex">
+            <div className="flex-grow">
+              <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+                HTML and CSS
+              </h2>
+              <p className="text-left text-primary-900 dark:text-primary-75">
+                My first real experiences with coding languages were through
+                learning HTML and CSS, but with practice, I got a better handle
+                on how to use them. I discovered that the more I worked with
+                these languages, the more I was able to apply them effectively.
+              </p>
+            </div>
+            <div className="hidden max-w-[100px] w-full md:inline">
+              <Image
+                src="/HTML-CSS.png"
+                alt="HTML and CSS"
+                width={600}
+                height={720}
+                className="w-full h-auto object-center transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 2B: JavaScript */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+          p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="javascript"
+        >
+          <div className="flex">
+            <div className="flex-grow">
+              <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+                JavaScript
+              </h2>
+              <p className="text-left text-primary-900 dark:text-primary-75">
+                After learning{" "}
+                <a
+                  href="#html-css"
+                  className="text-primary-700 hover:underline dark:text-primary-500"
+                >
+                  HTML and CSS
+                </a>{" "}
+                code, I moved onto JavaScript (JS), which at the time felt much
+                more complicated by comparison. What I enjoyed most about
+                learning JavaScript was being able to add real functionality to
+                my projects.
+              </p>
+            </div>
+            <div className="hidden max-w-[100px] w-full md:inline">
+              <Image
+                src="/JS.png"
+                alt="JavaScript"
+                width={600}
+                height={720}
+                className="w-full h-auto object-center transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 3B: NodeJS */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+        p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="node"
+        >
+          <div className="flex">
+            <div className="flex-grow">
+              <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+                Node.js
+              </h2>
+              <p className="text-left text-primary-900 dark:text-primary-75">
+                Node.js was my first dive into more advanced web development
+                tools. I initially learned it using React, but I later
+                transitioned to Next.js, which I found to be the most efficient
+                of the two.
+              </p>
+            </div>
+            <div className="hidden max-w-[100px] w-full md:inline">
+              <Image
+                src="/Node.png"
+                alt="Node"
+                width={600}
+                height={720}
+                className="w-full h-auto object-center transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 4B: Python */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+        p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="python"
+        >
+          <div className="flex">
+            <div className="flex-grow">
+              <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+                Python
+              </h2>
+              <p className="text-left text-primary-900 dark:text-primary-75">
+                After working with{" "}
+                <a
+                  href="#javascript"
+                  className="text-primary-700 hover:underline dark:text-primary-500"
+                >
+                  JavaScript
+                </a>{" "}
+                and{" "}
+                <a
+                  href="#node"
+                  className="text-primary-700 hover:underline dark:text-primary-500"
+                >
+                  Node.js
+                </a>
+                , I continued on to learning Python. What stood out to me was
+                the wide range of tools Python offers. I started off learning
+                functions like the `input()` command, and eventually expanded to
+                frameworks like Flask and Tkinter.
+              </p>
+            </div>
+            <div className="hidden max-w-[100px] w-full md:inline">
+              <Image
+                src="/Python.png"
+                alt="Node"
+                width={600}
+                height={720}
+                className="w-full h-auto object-center transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Section 5B: SQL */}
+        <section
+          className="mt-5 rounded-lg shadow-sm shadow-primary-950 border-2 border-primary-950
+          p-4 dark:shadow-primary-50 dark:border-primary-50 md:mt-10 md:px-12"
+          id="sql"
+        >
+          <div className="flex">
+            <div className="flex-grow">
+              <h2 className="text-primary-700 text-lg font-semibold text-left mb-2 dark:text-primary-500 md:text-2xl">
+                SQL
+              </h2>
+              <p className="text-left text-primary-900 dark:text-primary-75">
+                I picked up SQL more quickly than most languages. I especially
+                enjoyed tinkering with data using{" "}
+                <a
+                  href="https://www.mysql.com/"
+                  className="text-primary-700 hover:underline dark:text-primary-500"
+                >
+                  MySQL
+                </a>{" "}
+                as my database management system. I learned how to manage
+                databases with MySQL in{" "}
+                <a
+                  href="#python"
+                  className="text-primary-700 hover:underline dark:text-primary-500"
+                >
+                  Python
+                </a>{" "}
+                too.
+              </p>
+            </div>
+            <div className="hidden max-w-[100px] w-full md:inline">
+              <Image
+                src="/SQL.png"
+                alt="SQL"
+                width={600}
+                height={720}
+                className="w-full h-auto object-center transition-transform duration-300 hover:scale-105"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </>
   );
 }
